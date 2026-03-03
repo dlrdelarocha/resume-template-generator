@@ -1,0 +1,38 @@
+/* ============================================================
+   Global Styles — Resume Builder
+   ============================================================ */
+:root {
+  --primary:        #6B2FA0;
+  --primary-dark:   #521E80;
+  --primary-light:  #EDE0F5;
+  --divider:        #C0A0D8;
+  --text:           #1A1A1A;
+  --text-subtle:    #555555;
+  --border:         #E2E2E2;
+  --entry-bg:       #FAFAFA;
+  --bg-app:         #EDE8F4;
+  --bg-form:        #FFFFFF;
+  --bg-resume:      #FFFFFF;
+  --red:            #D03030;
+  --red-dark:       #AA2020;
+
+  --font-ui:     'Segoe UI', system-ui, Arial, sans-serif;
+  --font-resume: 'Georgia', 'Times New Roman', serif;
+  --radius:      6px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #app {
+  height: 100%;
+  font-family: var(--font-ui);
+  background: var(--bg-app);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+button { cursor: pointer; font-family: var(--font-ui); }

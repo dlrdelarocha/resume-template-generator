@@ -636,6 +636,27 @@
       </div>
     </Teleport>
 
+    <!-- Footer -->
+    <div class="panel-footer">
+      <a href="https://www.linkedin.com/in/delarocha01/" target="_blank" rel="noopener" class="footer-link footer-link--linkedin">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+          <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+        </svg>
+        LinkedIn
+      </a>
+      <a href="https://buymeacoffee.com/dlrdelarocha" target="_blank" rel="noopener" class="footer-link footer-link--coffee">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+          <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+          <line x1="6" y1="1" x2="6" y2="4" stroke="currentColor" stroke-width="2"/>
+          <line x1="10" y1="1" x2="10" y2="4" stroke="currentColor" stroke-width="2"/>
+          <line x1="14" y1="1" x2="14" y2="4" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        Buy me a coffee
+      </a>
+    </div>
+
   </aside>
 </template>
 
@@ -1645,6 +1666,34 @@ function removeCertEntry(i) {
 
 /* ---- Download ---- */
 .form-actions { padding-top: 2px; }
+
+.panel-footer {
+  display: flex;
+  gap: 8px;
+  padding: 12px 16px 14px;
+  border-top: 1px solid var(--border);
+  background: var(--bg-form);
+}
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+.footer-link:hover { opacity: 0.8; }
+.footer-link--linkedin {
+  background: #0a66c2;
+  color: #fff;
+}
+.footer-link--coffee {
+  background: #FFDD00;
+  color: #000;
+}
 
 .btn-download {
   display: flex;

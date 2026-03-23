@@ -25,11 +25,9 @@ function downloadPDF() {
     // Clone outside any scrollable container so html2canvas captures full height
     // Width 794px = A4 at 96dpi (210mm) so left/right padding is symmetric
     const clone = element.cloneNode(true)
-    clone.style.width = '794px'
-    clone.style.backgroundImage = 'none'   // quita la línea de página del preview
-    clone.style.minHeight = '0'            // evita página en blanco al final
+    clone.style.cssText = 'width:794px !important;max-width:794px !important;min-width:794px !important;background-image:none;min-height:0;transform:none;'
     const holder = document.createElement('div')
-    holder.style.cssText = 'position:absolute;top:0;left:-9999px;width:794px;background:#fff;'
+    holder.style.cssText = 'position:absolute;top:0;left:-9999px;width:794px;min-width:794px;background:#fff;overflow:visible;'
     holder.appendChild(clone)
     document.body.appendChild(holder)
 

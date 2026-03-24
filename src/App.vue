@@ -25,7 +25,14 @@ function downloadPDF() {
     // Clone outside any scrollable container so html2canvas captures full height
     // Width 794px = A4 at 96dpi (210mm) so left/right padding is symmetric
     const clone = element.cloneNode(true)
-    clone.style.cssText = 'width:794px !important;max-width:794px !important;min-width:794px !important;background-image:none;min-height:0;transform:none;'
+    // Preserve the inline CSS vars (typography) that Vue set, then override layout props
+    clone.style.width = '794px'
+    clone.style.setProperty('width', '794px', 'important')
+    clone.style.setProperty('max-width', '794px', 'important')
+    clone.style.setProperty('min-width', '794px', 'important')
+    clone.style.backgroundImage = 'none'
+    clone.style.minHeight = '0'
+    clone.style.transform = 'none'
     const holder = document.createElement('div')
     holder.style.cssText = 'position:absolute;top:0;left:-9999px;width:794px;min-width:794px;background:#fff;overflow:visible;'
     holder.appendChild(clone)
